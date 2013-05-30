@@ -12,7 +12,7 @@
 
 ```js
 // Data source: LinkedIn
-var data = [ 
+var data = [
   {'company': 'Microsoft' , 'size': 91259, 'revenue': 60420},
   {'company': 'IBM' , 'size': 400000, 'revenue': 98787},
   {'company': 'Skype' , 'size': 700, 'revenue': 716},
@@ -34,11 +34,12 @@ kmeans.clusterize(vectors, {k: 4}, function(err,res) {
 ```
 ## Intputs
  - 'vectors' is a nXm array (n [lines] : number of points, m [columns] : number of dimensions)
- - options object: 
+ - options object:
     - k : number of clusters
+    - distance : [optional] distance function
 
 ## Outputs
-An array of objects (one for each cluster) with the following properties: 
+An array of objects (one for each cluster) with the following properties:
  - centroid : array of X elements (X = number of dimensions)
  - cluster : array of X elements containing the vectors of the input data
  - clusterInd : array of X integers which are the indexes of the input data
